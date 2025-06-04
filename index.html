@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Made Acá | Inicio</title>
+    <meta name="description" content="12 y 13 de Octubre - Un encuentro que celebra el diseño hecho con identidad, raíz y creatividad.">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="img/isotipo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" />
+</head>
+
+<body>
+
+    <a class="arriba" href="#principio"> <span class="material-symbols-outlined" id="iconoNorth"> north </span> <span class="oculto"> Volver a arriba</span></a>
+
+    <header>
+
+        <a id="imagotipo" href="index.html"><img src="img/imagotipo.png" alt="Logo de la feria Made Acá."></a>
+
+        <nav>
+            <a class="activo" href="#">Inicio</a>
+            <a href="#actividades">Actividades</a>
+            <a href="#grid">Info práctica</a>
+            <a href="#inscripciones">Inscripciones</a>
+        </nav>
+
+        <span class="material-symbols-outlined" id="iconoMenu"> menu </span>
+
+    </header>
+
+    <section id="principio" class="principal">
+
+        <img src="img/feria.jpg" alt="Ambiente de la feria Made Acá con visitantes y expositores.">
+
+        <div class="textoPrincipal">
+
+            <h1>made acá</h1>
+
+            <p>Un encuentro que celebra el diseño hecho con identidad, raíz y creatividad.</p>
+
+            <p> <span class="material-symbols-outlined"> location_on </span> Montevideo, Parque Rodó</p>
+
+            <p> <span class="material-symbols-outlined"> event </span> 12 y 13 de Octubre</p>
+
+            <a class="boton1" href="#">Conocé más</a>
+
+        </div>
+
+    </section>
+
+    <section class="articles" id="actividades">
+
+        <h2>Explorá, creá y descubrí</h2>
+
+        <article>
+            <img src="img/tallerSerigrafia.jpg" alt="Materiales de serigrafía en uso durante un taller.">
+            <p class="etiqueta">Taller</p>
+            <h3>Serigrafía Artesanal</h3>
+            <p>Explorá el universo de la serigrafía manual: desde la emulsión hasta la impresión sobre tela y papel. Llevate tu pieza estampada!</p>
+            <a class="boton2" href="#">Inscribite!</a>
+        </article>
+    
+        <article>
+            <img src="img/tallerTipografia.jpg" alt="Proceso creativo de diseño tipográfico en taller.">
+            <p class="etiqueta">Taller</p>
+            <h3>Tipografía a Mano</h3>
+            <p>Redescubrí la letra como forma expresiva. Este taller propone crear tipografías inspiradas en rótulos callejeros, almacenes de barrio y cartelería popular uruguaya.</p>
+            <a class="boton2" href="#">Inscribite!</a>
+        </article>
+    
+        <article>
+            <img src="img/muestraTerritorioObjeto.jpg" alt="Afiches expuestos en la muestra durante la feria.">
+            <p class="etiqueta">Muestra</p>
+            <h3>Territorio Objeto</h3>
+            <p>Una exposición colectiva de diseñadores y artesanos contemporáneos que trabajan con técnicas locales y materiales autóctonos. Un mapa material de Uruguay desde el diseño.</p>
+            <a class="boton2" href="#">Ver obras</a>
+        </article>
+    
+        <article>
+            <img src="img/tallerMaterialesEncontrados.jpg" alt="Mesa con matreiales para realizar el taller.">
+            <p class="etiqueta">Taller</p>
+            <h3>Diseño con Materiales del Entorno</h3>
+            <p>Un taller de diseño de objetos a partir de materiales encontrados: madera, textiles, papel y otros elementos del paisaje urbano y natural.</p>
+            <a class="boton2" href="#">Inscribite!</a>
+        </article>
+    
+        <article>
+            <img src="img/charlaDisenadores.jpg" alt="Diseñadores invitados a exponer en la charla.">
+            <p class="etiqueta">Charla</p>
+            <h3>Diseñar Desde lo Cercano</h3>
+            <p>Un encuentro abierto con diseñadores independientes que reflexionan sobre el acto de diseñar desde lo cotidiano, lo comunitario y lo identitario.</p>
+            <a class="boton2" href="#">Ver programación</a>
+        </article>
+
+    </section>
+
+    <section id="grid">
+
+        <div id="grid1">
+
+            <div></div>
+
+            <article>
+                <img src="img/feriaGrid.jpg" alt="Personas recorriendo los stands de la feria.">
+                <a href="#">Ver +</a>
+            </article>
+            
+            <figure>
+                <img src="img/bocetosGrid.jpg" alt="Persona haciendo bocetos a mano en un cuaderno.">
+            </figure>
+
+        </div>
+        
+        <div id="grid2">
+
+            <article>
+                <video src="img/ciudadGrid.mp4" autoplay muted loop type="video/mp4"></video>
+                <p>Hecho con Identidad</p>
+            </article>
+
+            <div></div>
+
+            <article>
+                <p><span class="grande" class="color">Diseñar es</span><br><span class="transparente">pensar desde</span><br><span class="mediano" class="color">lo que somos</span></p>
+            </article>
+
+        </div>
+
+    </section>
+
+    <section id="inscripciones">
+
+        <h2>¿Querés participar, exponer o recibir info?</h2>
+
+        <form action="#" method="post">
+
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Florencia García"> <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="florencia@email.com"> <br>
+
+            <label for="interes">Interés:</label>
+            <select name="interes" id="interes" required>
+                <option value="" disabled selected>Seleccioná una opción</option>
+                <option value="visitante">Participar como visitante</option>
+                <option value="exponer">Exponer</option>
+                <option value="voluntariado">Participar como voluntario</option>
+            </select>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje" placeholder="Contanos un poco más sobre vos o dejá tu consulta..."></textarea>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+
+    </section>
+
+    <footer>
+
+        <div class="redes">
+            <p>Redes sociales:</p>
+            <a href="#"><img src="img/instagram24px.png" alt="Logo de Instagram"></a>
+            <a href="#"><img src="img/tik-tok24px.png" alt="Logo de TikTok"></a>
+            <a href="#"><img src="img/youtube24px.png" alt="Logo de Youtube"></a>
+        </div>
+
+        <p>Mail de contacto: contacto@territoriocreativo.uy</p>
+
+        <p>Dirección: Parque Rodó, Montevideo</p>
+
+    </footer>
+    
+</body>
+</html>

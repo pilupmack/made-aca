@@ -1,0 +1,596 @@
+@font-face {
+    font-family: "RST Reactor Regular";
+    src: url(fonts/RST_Reactor_Regular.woff2);
+}
+@font-face {
+    font-family: "RST Reactor Medium";
+    src: url(fonts/RST_Reactor_Medium.woff2);
+}
+
+@font-face {
+    font-family: "RST Reactor Cnd Medium";
+    src: url(fonts/RST_Reactor_Cnd_Medium.woff2);
+}
+
+@font-face {
+    font-family: "RST Reactor Exp Medium";
+    src: url(fonts/RST_Reactor_Exp_Medium.woff2);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --amarillo: #faae41;
+    --verdeAgua: #9ac3bb;
+    --verdeOscuro: #5b5121;
+    --verdeOscuroTransparente: #5b512180;
+    --verdeClaro: #ccb74d;
+    --beige: #fffdfa;
+    --beigeTransparente: #fffdfaef;
+    --naranja: #ed6328;
+    --rosado: #f8d5d3;
+}
+
+/*//// Generales ////*/
+
+body, label, select{
+    cursor: url(img/cursor.png), auto;
+}
+
+a, button{
+    cursor: url(img/taconeador.png), auto;
+}
+
+img, video{
+    object-fit: cover;
+    width: 100%;   
+}
+
+.principal img{
+    height: 50vh;
+    filter: brightness(0.7);
+}
+
+.principal{
+    padding: 0;
+    padding-top: 112px;
+    color: var(--beige);
+    position: relative;
+}
+
+.textoPrincipal{
+    padding-right: 2em;
+    position: absolute;
+    bottom: 3em;
+    left: 2.5em;
+}
+
+section{
+    padding: 2.5em;
+}
+
+#iconoMenu{
+    font-weight: 700;
+    font-size: 40px;
+}
+
+/*//// Articles ////*/
+
+.articles{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.articles article:nth-of-type(4) .etiqueta{
+    position: static;
+}
+
+.articles img, #grid div img, #grid article img, #grid figure img, video{
+    object-position: center;
+    filter: sepia(0.25) brightness(0.8);
+    transition: 0.2s;
+}
+
+.articles article{
+    display: flex;
+    flex-direction: column;
+    gap: 0.7em;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.etiqueta{
+    color: var(--beige);
+    font-family: "RST Reactor Medium";
+    background-color: var(--naranja);
+    padding: 0.5em;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 1em;
+}
+
+.articles article:nth-of-type(5), article:nth-of-type(4) img{
+    display: none;
+}
+
+/*//// Grid ////*/
+
+#grid{
+    padding: 0;
+}
+
+#grid1{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 50vh);
+    gap: 0;
+}
+
+#grid1 div, #grid2 div, #grid article, #grid figure{
+    overflow: hidden;
+}
+
+#grid1 div{
+    background-color: var(--verdeAgua);
+}
+
+#grid article{
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#grid figure{
+    display: flex;
+    color: var(--beige);
+}
+
+#grid article a, #grid article p{
+    color: var(--beige);
+    font-family: "RST Reactor Medium";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2em;
+    transition: 0.1s;
+}
+
+#grid img, #grid video{
+    height: 100%;
+}
+
+#grid2{
+    display: none;
+}
+
+/*//// Navegación ////*/
+
+header{
+    padding: 1.5em 2.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-color: var(--beigeTransparente);
+}
+
+nav{
+    display: none;
+}
+
+a{
+    border-radius: 5px;
+    font-family: "RST Reactor Medium";
+}
+
+.boton1{
+    color: var(--beige);
+    background-color: var(--naranja);
+    padding: 0.5em;
+    display: inline-block;
+    margin-top: 1.5em;
+    transition: 0.1s;
+}
+
+.boton2{
+    color: var(--naranja);
+    border: 2px solid var(--naranja);
+    background-color: var(--beige);
+    padding: 0.2em;
+    display: inline-block;
+    align-self: start;
+    transition: 0.1s;
+}
+
+.arriba{
+    position: fixed;
+    bottom: 3em;
+    right: 2em;
+    background-color: var(--verdeOscuro);
+    color: var(--beige);
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 52px;
+    height: 52px;
+    transition: 0.15s;
+    z-index: 1;
+}
+
+.oculto{
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#iconoNorth{
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+/*//// Tipografía ////*/
+
+body{
+    font-family: "RST Reactor Regular", sans-serif;
+    color: var(--verdeOscuro);
+}
+
+h2, h3{
+    font-family: "RST Reactor Medium", sans-serif;
+    font-weight: normal;
+    width: 100%;
+}
+
+h1{
+    font-family: "RST Reactor Cnd Medium", sans-serif;
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+.principal p{
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/*//// Formulario ////*/
+
+form{
+    margin-top: 2em;
+}
+
+label, button{
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+input, select, textarea{
+    border: 0.5px solid var(--verdeOscuro);
+    color: var(--verdeOscuro);
+}
+
+input:focus, select:focus, textarea:focus{
+    outline: none;
+    border: 2px solid var(--amarillo);
+}
+
+input::placeholder, textarea::placeholder{
+    color: var(--verdeOscuroTransparente);
+}
+
+input, select, textarea{
+    width: 60%;
+    font-size: 0.8em;
+}
+
+input{
+    height: 2em;
+    padding: 0.5em;
+}
+
+select{
+    height: 2em;
+}
+
+textarea{
+    height: 5em;
+    padding: 0.5em;
+}
+
+button{
+    background-color: var(--verdeOscuro);
+    border: none;
+    padding: 0.5em 1em;
+    color: var(--beige);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: 0.1s;
+}
+
+/*//// Footer ////*/
+
+footer{
+    background-color: var(--verdeClaro);
+    color: var(--beige);
+    padding: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+}
+
+.redes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.redes p{
+    width: 100%;
+}
+
+/*/////// TABLET ///////*/
+
+@media all and (min-width:768px){
+
+    /*//// Generales ////*/
+
+    .principal img{
+        height: 80vh;
+    }
+
+    .textoPrincipal{
+        width: 70%;
+    }
+
+    /*//// Navegación ////*/
+
+    nav{
+        display: flex;
+        gap: 1.5em;
+    }
+
+    nav a{
+        color: var(--verdeOscuro);
+        font-family: "RST Reactor Medium";
+        transition: 0.1s;
+    }
+
+    .activo{
+        color: var(--naranja);
+    }
+
+    #iconoMenu{
+        display: none;
+    }
+
+    /*//// Articles ////*/
+
+    .articles{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .articles article{
+        width: calc(100% / 2 - 1em);
+    }
+
+    .articles article:nth-of-type(4) img{
+        display: block;
+    }
+
+    .articles article:nth-of-type(4) .etiqueta{
+        position: absolute;
+    }
+
+    /*//// Grid ////*/
+
+    #grid1{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50vh);
+    }
+
+    #grid2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50vh;
+        height: 50vh;
+        font-size: 1.3em;
+    }
+
+    #grid1 article a{
+        font-size: 1.3em;
+    }
+
+    #grid1 article{
+        grid-row: span 2;
+    }
+
+    #grid2 article:nth-of-type(1){
+        grid-column: span 2;
+    }
+
+    #grid2 div, #grid article:nth-of-type(3){
+        display: none;
+    }
+
+    /*//// Formulario ////*/
+
+    input, select, textarea{
+        width: 40%;
+        font-size: 0.9em;
+    }
+
+}
+
+/*/////// DESKTOP ///////*/
+
+@media all and (min-width:1200px){
+
+    /*//// Generales ////*/
+
+    .principal img{
+        height: 50vh;
+    }
+
+    section{
+        padding: 3.5em 10em;
+    }
+
+    .textoPrincipal{
+        left: 10em;
+        bottom: 4em;
+    }
+
+    /*//// Navegación ////*/
+
+    header{
+        padding: 1.5em 10em;
+    }
+
+    nav a:hover{
+        color: var(--amarillo);
+        transition: 0.1s;
+    }
+
+    .boton1:hover{
+        background-color: var(--amarillo);
+        transition: 0.1s;
+    }
+
+    .boton2:hover{
+        color: var(--beige);
+        background-color: var(--amarillo);
+        border: 2px solid var(--amarillo);
+        transition: 0.1s;
+    }
+
+     .arriba:hover{
+        width: 12em;
+        transition: 0.15s;
+     }
+
+    .arriba:hover .oculto{
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    /*//// Articles ////*/
+
+    .articles article{
+        width: calc(100% / 3 - 1.35em);
+        gap: 1em;
+    }
+
+    .articles article:nth-of-type(5){
+        display: flex;
+    }
+
+    /*//// Grid ////*/
+
+    #grid{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #grid1, #grid2{
+        width: 50%;
+    }
+
+    #grid1{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50vh);
+    }
+
+    #grid2{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 50vh);
+    }
+
+    #grid2 div{
+        display: block;
+        background-color: var(--rosado);
+        transition: 1s;
+    }
+
+    #grid2 article:nth-of-type(2){
+        background-color: var(--amarillo);
+    }
+
+    #grid1 article:hover a{
+        font-size: 1.9em;
+        transition: 0.1s;
+    }
+
+    #grid1 article a{
+        font-size: 1.5em;
+    }
+
+    #grid1 article:hover img{
+        filter: brightness(0.5);
+        transition: 0.2s;
+    }
+
+    /*//// Tipografía ////*/
+
+    #grid2 article .grande{
+        font-family: "RST Reactor Exp Medium";
+        font-size: 1.05em;
+        transition: 0.2s;
+    }
+
+    #grid2 article .mediano{
+        font-family: "RST Reactor Cnd Medium";
+        font-size: 1.43em;
+        transition: 0.2s;
+    }
+
+    #grid2 article:nth-of-type(2):hover .transparente{
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+    #grid2 article:nth-of-type(2):hover{
+        background-color: var(--naranja);
+        transition: 0.2s;
+    }
+
+    #grid2 article:nth-of-type(2), #grid2 article:nth-of-type(2) p{
+        transition: 0.2s;
+    }
+
+    /*//// Formulario ////*/
+
+    input, select, textarea{
+        font-size: 1em;
+    }
+
+    button:hover{
+        transition: 0.1s;
+        background-color: var(--amarillo);
+    }
+
+    /*//// Footer ////*/
+
+    footer{
+        padding: 2.5em 10em;
+    }
+
+}
