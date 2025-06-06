@@ -1,3 +1,5 @@
+/*//// Fuentes ////*/
+
 @font-face {
     font-family: "RST Reactor Regular";
     src: url(fonts/RST_Reactor_Regular.woff2);
@@ -55,6 +57,7 @@ img, video{
 .principal img{
     height: 50vh;
     filter: brightness(0.7);
+    min-height: 340px;
 }
 
 .principal{
@@ -86,6 +89,7 @@ section{
     display: flex;
     flex-direction: column;
     gap: 2em;
+    justify-content: center;
 }
 
 .articles article:nth-of-type(4) .etiqueta{
